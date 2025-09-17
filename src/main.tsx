@@ -8,12 +8,15 @@ function Application() {
   ]);
 
   return (
-    <ul>
-      {tasks.map((t) => (
-        <li>{t.description}</li>
-      ))}
-    </ul>
+    <>
+      <h1>My Tasks</h1>
+      <ul>
+        {tasks.map((t) => (
+          <li>{t.description}</li>
+        ))}
+      </ul>
+    </>
   );
 }
 
-createRoot(document.getElementById("app")).render(<Application />);
+createRoot(document.getElementById("app")!).render(<Application />);
